@@ -23,7 +23,7 @@
 
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
 
     body {
       background: var(--cream);
@@ -32,6 +32,7 @@
       font-size: 18px;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     /* ─── NAV ─────────────────────────────────────────── */
@@ -327,7 +328,6 @@
       font-size: 15px;
       font-weight: 300;
       color: rgba(233,230,231,0.8);
-      white-space: nowrap;
     }
 
     .cred-item strong {
@@ -759,6 +759,196 @@
     .fade-up.d2 { transition-delay: 0.2s; }
     .fade-up.d3 { transition-delay: 0.3s; }
     .fade-up.d4 { transition-delay: 0.4s; }
+
+    /* ─── TABLET (max 1024px) ─────────────────────────── */
+    @media (max-width: 1024px) {
+      .services-grid,
+      .tools-grid,
+      .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-steps::before { display: none; }
+
+      .cred-bar {
+        gap: 24px;
+        padding: 20px 32px;
+      }
+    }
+
+    /* ─── MOBILE (max 768px) ──────────────────────────── */
+    @media (max-width: 768px) {
+
+      /* NAV */
+      nav {
+        padding: 0 20px;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 0;
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
+
+      .nav-links { display: none; }
+
+      .nav-cta {
+        font-size: 12px;
+        padding: 8px 16px;
+      }
+
+      .nav-logo { font-size: 16px; }
+
+      .nav-logo-img { height: 28px; }
+
+      /* HERO */
+      .hero {
+        min-height: 100svh;
+        background-position: center center;
+      }
+
+      .hero-content {
+        padding: 60px 24px;
+        max-width: 100%;
+      }
+
+      .hero-headline {
+        font-size: clamp(36px, 10vw, 52px);
+      }
+
+      .hero-subline {
+        font-size: 16px;
+      }
+
+      /* CREDIBILITY BAR */
+      .cred-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 28px 24px;
+      }
+
+      .cred-divider { display: none; }
+
+      .cred-item {
+        font-size: 14px;
+        white-space: normal;
+        flex-wrap: wrap;
+      }
+
+      .cred-item strong { font-size: 20px; }
+
+      /* WHO SECTION */
+      .who-section {
+        padding: 60px 24px;
+      }
+
+      .persona-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .persona-card:first-child {
+        border-right: none;
+        border-bottom: 2px solid var(--cream);
+      }
+
+      .persona-card { padding: 32px 28px; }
+
+      .persona-number { font-size: 48px; }
+
+      .persona-title { font-size: 20px; }
+
+      .who-note {
+        padding: 20px 24px;
+        font-size: 15px;
+      }
+
+      /* SERVICES */
+      .services-section {
+        padding: 60px 24px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        margin-top: 36px;
+      }
+
+      /* TOOLS */
+      .tools-section {
+        padding: 60px 24px;
+      }
+
+      .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 36px;
+      }
+
+      .tool-card { padding: 24px 20px; }
+
+      /* PROCESS */
+      .process-section {
+        padding: 60px 24px;
+      }
+
+      .process-steps {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 36px;
+      }
+
+      .process-steps::before { display: none; }
+
+      .process-step { padding: 0; }
+
+      /* CTA BAND */
+      .cta-band {
+        padding: 60px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+      }
+
+      .cta-band-actions {
+        align-items: flex-start;
+      }
+
+      .cta-band-headline {
+        font-size: clamp(26px, 7vw, 36px);
+      }
+
+      /* FOOTER */
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px 24px;
+        gap: 20px;
+      }
+
+      .footer-right {
+        align-items: flex-start;
+      }
+
+      /* SECTION HEADLINES */
+      .section-headline {
+        font-size: clamp(26px, 6vw, 36px);
+        margin-bottom: 36px;
+      }
+    }
+
+    /* ─── SMALL MOBILE (max 480px) ────────────────────── */
+    @media (max-width: 480px) {
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-headline {
+        font-size: clamp(32px, 9vw, 44px);
+      }
+
+      .btn-primary {
+        width: 100%;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -799,11 +989,11 @@
   <div class="cred-bar">
     <div class="cred-item"><strong>20+</strong> Years of experience</div>
     <div class="cred-divider"></div>
-    <div class="cred-item"><strong>10+</strong> Industries: logistics, agriculture, healthcare, professional services &amp; more</div>
+    <div class="cred-item"><strong>10+</strong> Industries served</div>
     <div class="cred-divider"></div>
     <div class="cred-item"><strong>Full Stack</strong> C# · .NET · SQL · Power BI · Azure/AWS · Excel</div>
     <div class="cred-divider"></div>
-    <div class="cred-item">Based in Los Angeles, CA</div>
+    <div class="cred-item">Los Angeles, CA</div>
   </div>
 
   <!-- WHO THIS IS FOR -->
@@ -1019,8 +1209,8 @@
       <p class="cta-band-sub">A 30-minute call costs nothing. A stalled project costs plenty.</p>
     </div>
     <div class="cta-band-actions">
-      <a href="mailto:JamesMillerBusinessSolutions@gmail.com" class="btn-light">Request a Consultation →</a>
-      <div class="cta-band-note">JamesMillerBusinessSolutions@gmail.com</div>
+      <a href="/cdn-cgi/l/email-protection#e7ad868a8294aa8e8b8b8295a592948e89829494b4888b92938e888994a7808a868e8bc984888a" class="btn-light">Request a Consultation →</a>
+      <div class="cta-band-note"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5d173c30382e10343131382f1f282e3433382e2e0e323128293432332e1d3a303c3431733e3230">[email&#160;protected]</a></div>
     </div>
   </section>
 
@@ -1028,18 +1218,10 @@
   <footer>
     <div class="footer-logo">James Miller <span>Business Solutions</span></div>
     <div class="footer-contact">
-      <a href="mailto:JamesMillerBusinessSolutions@gmail.com">JamesMillerBusinessSolutions@gmail.com</a>
+      <a href="/cdn-cgi/l/email-protection#642e05090117290d080801162611170d0a011717370b0811100d0b0a17240309050d084a070b09"><span class="__cf_email__" data-cfemail="8cc6ede1e9ffc1e5e0e0e9fecef9ffe5e2e9ffffdfe3e0f9f8e5e3e2ffccebe1ede5e0a2efe3e1">[email&#160;protected]</span></a>
       &nbsp;·&nbsp; Los Angeles, CA
     </div>
     <div class="footer-right">
       <a href="https://www.linkedin.com/in/jamesmillerbusinesssolutions/" target="_blank" class="footer-linkedin" aria-label="LinkedIn">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6.5 9.5H4V20H6.5V9.5ZM5.25 8.25C6.08 8.25 6.75 7.58 6.75 6.75C6.75 5.92 6.08 5.25 5.25 5.25C4.42 5.25 3.75 5.92 3.75 6.75C3.75 7.58 4.42 8.25 5.25 8.25ZM20 20H17.5V14.5C17.5 12.57 16.69 11.75 15.44 11.75C14.19 11.75 13.5 12.61 13.5 14.5V20H11V9.5H13.4V10.77C13.89 9.92 14.89 9.25 16.25 9.25C18.63 9.25 20 10.74 20 13.5V20Z" fill="currentColor"/>
-        </svg>
-        LinkedIn
-      </a>
-      <div class="footer-copy">© 2026 James Miller Business Solutions</div>
-    </div>
-  </footer>
-
-  <script data-cfasync=
+          <path d="M6.5 9.5H4V20H6.5V9.5ZM5.25 8.25C6.08 8.25 6.75 7.58 6.75 6.75C6.75 5.92 6.08 5.25 5.25 5.25C4.42 5.25 3.75 5.92 3.75 6.75C3.75 7.58 4.42 8
