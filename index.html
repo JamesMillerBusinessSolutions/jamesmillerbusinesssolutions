@@ -930,6 +930,8 @@
 
       .tool-desc { display: none; }
 
+      .tool-name { font-size: 14px; }
+
       /* PROCESS */
       .process-section {
         padding: 60px 24px;
@@ -983,7 +985,7 @@
     /* ─── SMALL MOBILE (max 480px) ────────────────────── */
     @media (max-width: 480px) {
       .tools-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .hero-headline {
