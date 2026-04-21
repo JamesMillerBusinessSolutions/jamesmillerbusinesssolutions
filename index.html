@@ -467,6 +467,188 @@
       max-width: 860px;
     }
 
+    /* ─── VALUE PROPOSITION ───────────────────────────── */
+    .value-section {
+      padding: 96px 48px;
+      border-bottom: 1.5px solid var(--border);
+      background: var(--cream);
+    }
+
+    .value-body {
+      max-width: 780px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .value-text {
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--dark);
+      line-height: 1.8;
+    }
+
+    .value-text strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .value-closer {
+      font-weight: 500;
+      color: var(--ink);
+      border-left: 3px solid var(--brown);
+      padding-left: 20px;
+    }
+
+    .value-sources {
+      max-width: 780px;
+      padding: 24px 28px;
+      background: var(--sky-light);
+      border-left: 3px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .value-sources p {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .value-sources p strong {
+      color: var(--dark);
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .value-section {
+        padding: 60px 24px;
+      }
+
+      .value-text {
+        font-size: 16px;
+      }
+    }
+
+    /* ─── WHAT WE DELIVER ─────────────────────────────── */
+    .deliver-section {
+      padding: 96px 48px;
+      border-bottom: 1.5px solid var(--border);
+      background: #f4f2f1;
+    }
+
+    .deliver-intro {
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--muted);
+      margin-top: -36px;
+      margin-bottom: 56px;
+    }
+
+    .deliver-services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      margin-bottom: 64px;
+    }
+
+    .deliver-card {
+      background: var(--cream);
+      padding: 36px 32px;
+      border-top: 3px solid transparent;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .deliver-card:hover {
+      border-top-color: var(--navy);
+      background: #e2dedd;
+    }
+
+    .deliver-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .deliver-desc {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .deliver-why {
+      background: var(--dark);
+      padding: 48px;
+    }
+
+    .deliver-why-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 36px;
+    }
+
+    .deliver-why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+
+    .deliver-why-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 10px;
+    }
+
+    .deliver-why-desc {
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(233,230,231,0.75);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1024px) {
+      .deliver-why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .deliver-section {
+        padding: 60px 24px;
+      }
+
+      .deliver-intro {
+        margin-top: -20px;
+        margin-bottom: 36px;
+        font-size: 16px;
+      }
+
+      .deliver-services {
+        grid-template-columns: 1fr;
+        margin-bottom: 40px;
+      }
+
+      .deliver-why {
+        padding: 36px 24px;
+      }
+
+      .deliver-why-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
     /* ─── SERVICES ────────────────────────────────────── */
     .services-section {
       padding: 96px 48px;
@@ -1063,7 +1245,6 @@
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#process">Process</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -1078,7 +1259,7 @@
         We Fix What<br><em>AI Started.</em>
       </h1>
       <p class="hero-subline">
-        20+ years of cross-industry experience delivering custom software, business intelligence, and process automation — for businesses that need results, not another proof of concept.
+        20+ years delivering custom software, business intelligence, and process automation — for small and mid-size businesses that need results, not another proof of concept.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn-primary">Book a Free Discovery Call</a>
@@ -1093,8 +1274,8 @@
     <div class="cred-item"><strong>10+</strong> Industries served</div>
   </div>
 
-  <!-- WHO THIS IS FOR -->
-  <section class="who-section" id="about">
+  <!-- WHO THIS IS FOR (hidden) -->
+  <section class="who-section" id="about1" style="display: none;">
     <div class="section-eyebrow">Who this is for</div>
     <h2 class="section-headline who-headline">Two kinds of businesses find their way here.</h2>
     <div class="persona-grid">
@@ -1160,8 +1341,25 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
-  <section class="services-section" id="services">
+  <!-- VALUE PROPOSITION -->
+  <section class="value-section" id="about">
+    <div class="section-eyebrow">Why fractional</div>
+    <h2 class="section-headline">Get Your Projects Moving — Without Full-Time Overhead</h2>
+    <div class="value-body">
+      <p class="value-text">Stalled projects and manual processes are quietly draining your time, money, and momentum.</p>
+      <p class="value-text">Instead of hiring a full-time developer or AI expert — with fully-loaded costs typically ranging from <strong>$150K–$250K+ per year</strong> (salary, benefits, taxes, recruiting, and overhead)<sup>1</sup> — you can bring in senior-level expertise on a flexible, fractional basis. Pay only for the hours or scope your business actually needs, for as long as you need it. No long-term payroll. No benefits. No unused capacity.</p>
+      <p class="value-text">This approach helps small and mid-size businesses <strong>cut technical talent costs by 50–70%</strong> (and often more) while delivering the same high-impact results.<sup>2</sup></p>
+      <p class="value-text value-closer">That's exactly what we deliver — senior expertise, hands-on execution, and real momentum, scaled precisely to what your business needs right now.</p>
+    </div>
+    <div class="value-sources">
+      <p><strong>Sources &amp; Notes</strong></p>
+      <p><sup>1</sup> Fully-loaded annual costs for senior software developers, BI specialists, and similar technical roles in the US typically range from $150K–$250K+ (base salary plus benefits, taxes, recruiting, and overhead). See 2026 salary benchmarks.</p>
+      <p><sup>2</sup> Fractional technical talent models commonly provide 50–70% (or higher) cost savings versus full-time hires for small and mid-size businesses through flexibility, no benefits/overhead, and pay-for-use structure. See fractional CTO cost comparisons.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES (hidden) -->
+  <section class="services-section" id="services-hidden" style="display: none;">
     <div class="section-eyebrow">What I do</div>
     <h2 class="section-headline">Senior-level delivery across the full stack — without the agency overhead.</h2>
     <div class="services-grid">
@@ -1184,11 +1382,55 @@
     </div>
   </section>
 
+  <!-- WHAT WE DELIVER -->
+  <section class="deliver-section" id="services">
+    <div class="section-eyebrow">What we deliver</div>
+    <h2 class="section-headline">Senior-level work across the full stack — without agency overhead or junior handoffs.</h2>
+    <p class="deliver-intro">You pay only for the expertise your business actually uses.</p>
+
+    <div class="deliver-services">
+      <div class="deliver-card fade-up">
+        <div class="deliver-title">Rescue & Completion</div>
+        <p class="deliver-desc">I take over half-built apps, dashboards, integrations, or AI-generated projects, quickly diagnose issues, eliminate technical debt, and deliver them into production — so you finally realize the ROI you planned for.</p>
+      </div>
+      <div class="deliver-card fade-up d1">
+        <div class="deliver-title">Business Intelligence & Reporting</div>
+        <p class="deliver-desc">Clear, trustworthy dashboards and reports in Power BI, SSRS, or Excel that turn scattered data into actionable insights — replacing guesswork and manual effort with confident decisions that save your team hours every week.</p>
+      </div>
+      <div class="deliver-card fade-up d2">
+        <div class="deliver-title">Custom Software & Process Automation</div>
+        <p class="deliver-desc">Practical solutions built around your existing workflows — using Power Automate, Excel/VBA, smart APIs, and more to eliminate repetitive tasks, reduce errors, and free up capacity without adding headcount.</p>
+      </div>
+    </div>
+
+    <div class="deliver-why">
+      <h3 class="deliver-why-title">Why SMBs Choose James Miller Business Solutions</h3>
+      <div class="deliver-why-grid">
+        <div class="deliver-why-card fade-up">
+          <div class="deliver-why-heading">Significant Cost Savings</div>
+          <p class="deliver-why-desc">Access enterprise-grade skills at a fraction of full-time expense, with full flexibility to scale hours up or down.</p>
+        </div>
+        <div class="deliver-why-card fade-up d1">
+          <div class="deliver-why-heading">Faster Time-to-Value</div>
+          <p class="deliver-why-desc">Senior expertise means quicker rescues, cleaner implementations, and measurable results without months of ramp-up.</p>
+        </div>
+        <div class="deliver-why-card fade-up d2">
+          <div class="deliver-why-heading">Lower Risk</div>
+          <p class="deliver-why-desc">No bad hires, no long-term commitments, and no dependency — you get production-ready solutions with clear documentation and full ownership.</p>
+        </div>
+        <div class="deliver-why-card fade-up d3">
+          <div class="deliver-why-heading">Tailored Flexibility</div>
+          <p class="deliver-why-desc">Expert help on projects or ongoing support, without overextending your budget.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- TOOLS & PLATFORMS -->
   <section class="tools-section" id="platforms">
-    <div class="section-eyebrow">Tools &amp; Platforms</div>
+    <div class="section-eyebrow">Tools &amp; Platforms I Use</div>
     <h2 class="section-headline" style="max-width: 100%;">I don't force you onto new, complicated tools.</h2>
-    <p class="tools-subheadline">I work inside the platforms your business already knows and uses — so you get results faster, with way less friction and zero steep learning curves.</p>
+    <p class="tools-subheadline">I deliver inside the systems your business already knows and trusts — faster results, zero learning curve, no extra licensing surprises.</p>
     <div class="tools-grid">
 
       <div class="tool-card fade-up">
@@ -1201,7 +1443,7 @@
           </svg>
         </div>
         <div class="tool-name">Power BI</div>
-        <div class="tool-desc">Actionable dashboards and reporting that replace guesswork and manual Excel with clear insights your team can actually trust.</div>
+        <div class="tool-desc">Actionable dashboards that deliver clear insights</div>
       </div>
 
       <div class="tool-card fade-up d1">
@@ -1216,7 +1458,7 @@
           </svg>
         </div>
         <div class="tool-name">Excel + VBA / Power Query</div>
-        <div class="tool-desc">Advanced automation and custom solutions that turn painful manual processes into fast, repeatable work.</div>
+        <div class="tool-desc">Powerful automation and custom solutions</div>
       </div>
 
       <div class="tool-card fade-up d2">
@@ -1229,7 +1471,7 @@
           </svg>
         </div>
         <div class="tool-name">SQL Server</div>
-        <div class="tool-desc">Reliable data modeling, ETL, and backend logic that powers clean reporting and smooth integrations.</div>
+        <div class="tool-desc">Reliable data modeling and backend logic</div>
       </div>
 
       <div class="tool-card fade-up d3">
@@ -1242,7 +1484,7 @@
           </svg>
         </div>
         <div class="tool-name">Azure & AWS</div>
-        <div class="tool-desc">Secure cloud deployments and integrations.</div>
+        <div class="tool-desc">Secure cloud deployments and integrations</div>
       </div>
 
       <div class="tool-card fade-up">
@@ -1256,7 +1498,7 @@
           </svg>
         </div>
         <div class="tool-name">Power Automate</div>
-        <div class="tool-desc">Smart workflow automation that eliminates repetitive tasks and connects your systems without custom coding from scratch.</div>
+        <div class="tool-desc">Intelligent workflow automation</div>
       </div>
 
       <div class="tool-card fade-up d1">
@@ -1269,7 +1511,7 @@
           </svg>
         </div>
         <div class="tool-name">.NET (C# & Blazor)</div>
-        <div class="tool-desc">Modern, tailored web and desktop applications built specifically for your operations — field-ready and mobile-friendly.</div>
+        <div class="tool-desc">Modern, field-ready web and desktop applications</div>
       </div>
 
       <div class="tool-card fade-up d2">
@@ -1282,7 +1524,7 @@
           </svg>
         </div>
         <div class="tool-name">SSRS & Crystal Reports</div>
-        <div class="tool-desc">Precise operational and paginated reports for back-office and compliance needs.</div>
+        <div class="tool-desc">Precise operational and compliance reporting</div>
       </div>
 
       <div class="tool-card fade-up d3">
@@ -1294,7 +1536,7 @@
           </svg>
         </div>
         <div class="tool-name">APIs & Cloud Storage</div>
-        <div class="tool-desc">Seamless third-party integrations and file syncing that fit into your existing tools.</div>
+        <div class="tool-desc">Seamless third-party integrations</div>
       </div>
 
     </div>
@@ -1303,27 +1545,27 @@
   <!-- PROCESS -->
   <section class="process-section" id="process">
     <div class="section-eyebrow">How it works</div>
-    <h2 class="section-headline">Straightforward. Transparent. Built to move fast and deliver.</h2>
+    <h2 class="section-headline">Simple, transparent, and designed for steady momentum.</h2>
     <div class="process-steps">
       <div class="process-step fade-up">
         <div class="step-circle">1</div>
         <div class="step-title">Discovery Call</div>
-        <p class="step-desc">30 minutes. You share the stalled project, spreadsheet chaos, or reporting pain. I listen, ask the right questions, and help you see the real issues clearly — often for the first time.</p>
+        <p class="step-desc">30 minutes. Share your situation. I listen, clarify challenges, and outline a practical path forward with clear costs and timeline expectations.</p>
       </div>
       <div class="process-step fade-up d1">
         <div class="step-circle">2</div>
         <div class="step-title">Rescue Audit</div>
-        <p class="step-desc">Fixed-fee deep dive. You receive a crisp report: what's broken, why it went wrong, and the exact fix-it roadmap.</p>
+        <p class="step-desc">Receive a concise report: current issues, root causes, and the exact roadmap — including projected savings versus a full-time hire.</p>
       </div>
       <div class="process-step fade-up d2">
         <div class="step-circle">3</div>
         <div class="step-title">Build & Deliver</div>
-        <p class="step-desc">I own the execution. Regular, useful updates. Zero fluff. Whether it's a quick rescue or longer support, we keep momentum until it's done.</p>
+        <p class="step-desc">I own execution with regular, useful updates. We scale effort as your needs evolve — keeping costs aligned with results.</p>
       </div>
       <div class="process-step fade-up d3">
         <div class="step-circle">4</div>
         <div class="step-title">Done & Documented</div>
-        <p class="step-desc">You get production-ready software + documentation your team can actually use. No dependency. Just results that last.</p>
+        <p class="step-desc">You receive production-ready software, clear documentation your team can use, and full ownership — no lingering dependency.</p>
       </div>
     </div>
   </section>
@@ -1331,12 +1573,12 @@
   <!-- CTA BAND -->
   <section class="cta-band" id="contact">
     <div class="cta-band-left">
-      <div class="cta-band-headline">Let's talk about what's stuck.</div>
-      <p class="cta-band-sub">A 30-minute call costs nothing. A stalled project costs plenty.</p>
+      <div class="cta-band-headline">Real Results. Real Savings. Real Relief.</div>
+      <p class="cta-band-sub">As your fractional partner, I deliver senior expertise on your schedule — helping small and mid-size businesses save tens of thousands annually, accelerate projects, and unlock measurable impact without the overhead or risk of traditional hiring.</p>
     </div>
     <div class="cta-band-actions">
-      <a href="mailto:JamesMillerBusinessSolutions@gmail.com" class="btn-light">Schedule a Discovery Call →</a>
-      <div class="cta-band-note"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5d173c30382e10343131382f1f282e3433382e2e0e323128293432332e1d3a303c3431733e3230">[email&#160;protected]</a></div>
+      <a href="mailto:JamesMillerBusinessSolutions@gmail.com" class="btn-light">Schedule Your Complimentary 30-Minute Discovery Call Today →</a>
+      <div class="cta-band-note">JamesMillerBusinessSolutions@gmail.com</div>
     </div>
   </section>
 
@@ -1344,13 +1586,14 @@
   <footer>
     <div class="footer-logo">James Miller <span>Business Solutions</span></div>
     <div class="footer-contact">
-      <a href="/cdn-cgi/l/email-protection#642e05090117290d080801162611170d0a011717370b0811100d0b0a17240309050d084a070b09"><span class="__cf_email__" data-cfemail="8cc6ede1e9ffc1e5e0e0e9fecef9ffe5e2e9ffffdfe3e0f9f8e5e3e2ffccebe1ede5e0a2efe3e1">[email&#160;protected]</span></a>
+      <a href="mailto:JamesMillerBusinessSolutions@gmail.com">JamesMillerBusinessSolutions@gmail.com</a>
       &nbsp;·&nbsp; Los Angeles, CA
     </div>
     <div class="footer-right">
       <a href="https://www.linkedin.com/in/jamesmillerbusinesssolutions/" target="_blank" class="footer-linkedin" aria-label="LinkedIn">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6.5 9.5H4V20H6.5V9.5ZM5.25 8.25C6.08 8.25 6.75 7.58 6.75 6.75C6.75 5.92 6.08 5.25 5.25 5.25C4.42 5.25 3.75 5.92 3.75 6.75C3.75 7.58 4.42 8          <path d="M20.5 20H18V14.5C18 13.12 17.98 11.37 16.1 11.37C14.2 11.37 13.92 12.87 13.92 14.4V20H11.42V9.5H13.82V11.07H13.85C14.18 10.42 15.03 9.73 16.3 9.73C18.83 9.73 19.5 11.39 19.5 13.55V20H20.5Z" fill="currentColor"/>
+          <path d="M6.5 9.5H4V20H6.5V9.5ZM5.25 8.25C6.08 8.25 6.75 7.58 6.75 6.75C6.75 5.92 6.08 5.25 5.25 5.25C4.42 5.25 3.75 5.92 3.75 6.75C3.75 7.58 4.42 8.25 5.25 8.25Z" fill="currentColor"/>
+          <path d="M20.5 20H18V14.5C18 13.12 17.98 11.37 16.1 11.37C14.2 11.37 13.92 12.87 13.92 14.4V20H11.42V9.5H13.82V11.07H13.85C14.18 10.42 15.03 9.73 16.3 9.73C18.83 9.73 19.5 11.39 19.5 13.55V20H20.5Z" fill="currentColor"/>
         </svg>
         LinkedIn
       </a>
